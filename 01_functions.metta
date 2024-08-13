@@ -15,7 +15,7 @@
 
 ; simple function with two exclusive branches
 (= (add $x Z) $x)
-(= (add $x ($ $y)) (add (S $x) $y))
+(= (add $x (S $y)) (add (S $x) $y))
 
 !(add (S (S Z)) (S (S (S Z))))
 ; [(S (S (S (S (S Z)))))]
@@ -30,8 +30,9 @@
 ; function with two non-exclusive branches
 
 ; straightforward implementation goes into infinite loop
-;(= (to-peano 0) Z)
-;(= (to-peano $x) (S (to-peano (- $x 1))))
+;(= (to-peano' 0) Z)
+;(= (to-peano' $x) (S (to-peano' (- $x 1))))
+;!(to-peano' 1)
 
 ; correct implementation
 (= (to-peano $x)

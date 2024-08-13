@@ -1,5 +1,5 @@
 ; MeTTa program consists of atoms added into the atomspace
-; and expressions for evaluation prepended by '!'
+; and atoms which are evaluated when prefixed by '!'
 
 ; atomspace contents
 
@@ -20,7 +20,7 @@ Sophia ; a single symbol
 
 ; double-sided matching
 
-(Sam is a $who) ; a variable in the atomspace
+(Sam is a $what) ; a variable in the atomspace
 
 !(match &self ($who is a frog) $who)
 ; [Sam]
